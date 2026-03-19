@@ -77,7 +77,7 @@ st.markdown("""
 @st.cache_resource
 def load_model():
     # Works both locally and on Streamlit Cloud
-    base_dir = Path(__file__).parent
+    base_dir = Path(__file__).parent.parent
     model_path = base_dir / "src" / "fraud_model.pkl"
  
     if not model_path.exists():
